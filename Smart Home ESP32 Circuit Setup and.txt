@@ -1,0 +1,49 @@
+Smart Home ESP32 Circuit Setup and Testing Report
+
+1. INITIAL CONNECTIONS
+
+This section outlines the process of setting up the ESP32 circuit on a breadboard for initial testing using four LEDs.
+
+- Begin by inserting the ESP32 development board into the breadboard. Ensure that all pins are accessible for wiring.
+- Connect the VCC pin of the ESP32 to the breadboard's power rail.
+- Connect the GND pin to the ground rail.
+- Select GPIO output pins that are physically close together to keep the wiring neat and traceable.
+
+  The following GPIO pins were used:
+    - GPIO 12: Bedroom Light
+    - GPIO 13: Kitchen Light
+    - GPIO 26: Bedroom Plug 1
+    - GPIO 25: Bedroom Plug 2
+    - GPIO 33: Kitchen Plug 1
+    - GPIO 32: Kitchen Plug 2
+
+- For testing purposes, LEDs were connected to each of the GPIO pins above to verify signal output.
+
+Note: A short video demonstration has been included in the folder named "FIGURE 1" as proof of successful testing.
+
+2. RELAY MODULE CONNECTIONS
+
+After completing the breadboard test using LEDs, the next step involved connecting the ESP32 to relay modules that control actual appliances.
+
+- The ESP32 was powered using a standard phone charger.
+- The relay modules were also powered using the ESP32’s output power; however, for reliability, it is recommended to power the ESP32 and relays separately.
+
+Connections:
+  - Connect ESP32 VCC to the VCC of the relay module.
+  - Connect ESP32 GND to the relay module GND.
+  - Reconnect each wire from the tested GPIO pins to the input (signal) pin of the corresponding relay channel.
+
+Each relay controls a different appliance based on the GPIO pin it is connected to.
+
+3. USER DEVICE INTERACTION
+
+- On a smartphone or other device, open a browser and enter the IP address displayed in the serial monitor after uploading and running the ESP32 code.
+- A control panel interface will load in the browser.
+- Use the control panel to send commands to the ESP32.
+- The ESP32 will respond by activating the corresponding relay, which in turn controls the connected appliance.
+
+NB: I HAVE INCLUDED OTHER VIDEOS AS DEMONSTRATION. (FIGURE 1 , FIGURE 2, FIGURE 3 AND FIGURE 4).
+End of Report
+
+
+
